@@ -57,7 +57,7 @@ const App = (props) => {
       content: newComment
     }
     
-    axios.post('https://localhost:3001/comments', commentObject) 
+    axios.post('http://localhost:3001/comments', commentObject) 
       .then(setComments(comments.concat(commentObject)))
   setNewComment('')
 }
