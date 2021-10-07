@@ -25,7 +25,6 @@ const App = (props) => {
   const [personal, setPersonal] = useState(0)
   const [professional, setProfessional] = useState(0)
   const [toShow, setToShow] = useState()
-  const [showTab, setShowTab] = useState()
   const [showRepo, setShowRepo] = useState()
 
   const updated_date = moment(info.updated_at, "YYYY-MM-DD").fromNow()
@@ -33,18 +32,18 @@ const App = (props) => {
 
   const hook = () => {
    axios
-    .get('http://api.github.com/users/riikkawho')
+    .get('https://api.github.com/users/riikkawho')
     .then(response => {
      setInfo(response.data)
     })
 
     axios
-     .get('http://api.github.com/users/riikkawho/repos')
+     .get('https://api.github.com/users/riikkawho/repos')
      .then(response => {
       setSubInfo(response.data)
      })
 
-     axios.get('http://localhost:3001/comments')
+     axios.get('https://localhost:3001/comments')
      .then(response => {
        setComments(response.data)
      })
@@ -58,7 +57,7 @@ const App = (props) => {
       content: newComment
     }
     
-    axios.post('http://localhost:3001/comments', commentObject) 
+    axios.post('https://localhost:3001/comments', commentObject) 
       .then(setComments(comments.concat(commentObject)))
   setNewComment('')
 }
@@ -91,7 +90,7 @@ const onClickRepo = (index) => {
   : setShowRepo(index)
 
   axios
-  .get(`http://api.github.com/repos/riikkawho/${subInfo[index].name}/contents`)
+  .get(`https://api.github.com/repos/riikkawho/${subInfo[index].name}/contents`)
   .then(response => {
      setRepoInfo(response.data)
   }) 
@@ -119,6 +118,7 @@ return (
 
       <h4>Repositories</h4>
       <RepoDetails
+        key={subInfo.name}
         repoDetails=
         {subInfo.map((repo, index) => 
           showRepo === index
@@ -160,6 +160,7 @@ return (
   <div>
     <Container sx={{ height: '100%' }} style={{ backgroundColor: "whitesmoke", borderRadius: "10px" }}>
       <Comment 
+        key={comments.id}
         onClick={addComment}
         comments={[...comments].reverse().map(comment => <Stack textAlign="center" fontSize="14px"><p>{comment.content}</p></Stack>)}
         onChange={handleChange}
