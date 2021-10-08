@@ -35,7 +35,7 @@ const RepoDetails = (props) => {
         {subInfo.map((repo, index) => 
           showRepo === index
           ? <ListItemButton key={repo.name} onClick={() => onClickRepo(index)}>
-            <ListItemText primary={repo.name} secondary={`Contains ${repoInfo.length} items, last commit was ${moment(repo.updated_at, "YYYY-MM-DD").fromNow()}, written in ${repo.language}`}/>
+            <ListItemText primary={repo.name} secondary={`Contains ${repoInfo.length} items, last commit was ${moment(repo.pushed_at, "YYYY-MM-DD").fromNow()}, written in ${repo.language}`}/>
             </ListItemButton>
     
           : <ListItemButton key={repo.name} onClick={() => onClickRepo(index)}>
