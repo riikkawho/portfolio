@@ -11,10 +11,10 @@ return (
 <div>
   <div style={{ 
     display: "grid", 
-    gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20, height: "100%"}}>
+    gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20}}>
     <div > 
     <Container 
-      sx={{ height: '100%', width: '30' }} 
+      sx={{ height: '120%', width: '30' }} 
       style={{backgroundColor: "whitesmoke", borderRadius: "10px"}}>
       <Info /> 
       <RepoDetails/> 
@@ -22,13 +22,13 @@ return (
   </div>
   <div>
     <Container 
-      sx={{ height: '100%' }} 
+      sx={{ height: '120%' }} 
       style={{ backgroundColor: "lightgrey", borderRadius: "10px" }}>
       <QuestAns />
     </Container>
   </div>  
   <div>
-    <Container sx={{ height: '100%' }} 
+    <Container sx={{ height: '120%' }} 
       style={{ backgroundColor: "whitesmoke", borderRadius: "10px" }}>
       <Comment />
     </Container>
