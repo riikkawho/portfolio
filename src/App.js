@@ -11,7 +11,7 @@ return (
 <div>
   <div style={{ 
     display: "grid", 
-    gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20}}>
+    gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20, height: "100%" }}>
     <div > 
     <Container 
       sx={{ height: '120%', width: '30' }} 
