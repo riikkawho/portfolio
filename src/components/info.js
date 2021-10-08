@@ -1,18 +1,31 @@
-import React from "react";
-import { ListItemAvatar, Avatar, ListItem, Card, ListItemText } from '@mui/material';
+import React, { useState, useEffect } from "react";
+import { ListItemAvatar, Avatar, ListItem, Card, ListItemText } from '@mui/material'
+import infosService from "../services/infosService"
+import moment from "moment"
 
-
-const Info = (props) => {
+const Info = () => {
+  const [info, setInfo] = useState([])
+ 
+  useEffect (() => {
+    infosService
+    .getMainInfo()
+    .then(response => {
+      setInfo(response.data)
+    })
+  }, [])
+  
+    const updated_date = moment(info.updated_at, "YYYY-MM-DD").fromNow()
+    const created_date = moment(info.created_at, "YYYY-MM-DD").fromNow()
 
     return (
     <div>
       <div>
-        <h2>{props.fullname}</h2>
+        <h2>{info.name}</h2>
         <Card style={{ backgroundColor: "lightgrey" }}>
-          <p>{props.bio}</p>
+          <p>{info.bio}</p>
         </Card>
         <h4>My profiles:&nbsp;
-          <a href={props.url}>Github</a>&nbsp;&nbsp;
+          <a href={info.html_url}>Github</a>&nbsp;&nbsp;
           <a href="https://www.linkedin.com/in/riikka-kukka">LinkedIn</a></h4>
       </div>
       <p/>
@@ -20,13 +33,12 @@ const Info = (props) => {
         <h3>Github review</h3> 
           <Card>
           <ListItem alignItems="center">
-            <ListItemText alignItems="center">@{props.name}</ListItemText>
-            <ListItemAvatar><Avatar src={props.image} alt="avatar"/></ListItemAvatar>
+            <ListItemText>@{info.login}</ListItemText>
+            <ListItemAvatar><Avatar src={info.avatar_url} alt="avatar"/></ListItemAvatar>
           </ListItem>
             <ListItemText>
-              created {props.created}, last update {props.updated}
+              created {created_date}, last update {updated_date}
             </ListItemText>
-          {props.information}
           </Card>
       </div>
     </div>

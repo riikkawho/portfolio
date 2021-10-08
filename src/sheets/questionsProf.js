@@ -7,12 +7,12 @@ const questSheetProf = [
     answer: "That's something I've thought for a few years now but hadn't had resources to study. Still don't, but since I started my current work at the office, I met a colleague who was very skilled with excel sheets. He showed me a few tricks how to handle data and make it work for me and that's how it started to spark. I found myself writing complex functions, googling solutions to difficult tasks and got so exited, that I knew I wanted more. That was the kick for me to start studying programming in the meantime, and it's overwhelming how I feel about it. This is what I want to learn more and do for living.", 
     id: 7
     },
-    {question: "Why do you think you could shine at it?", 
-    answer: "It's very satisfying to make things work so pretty. I've always loved problem solving, putting my brain to work, learning new skills, creating something new. I've got a good amount of logical thinking and persistance among the social skills and customer oriented thinking. I'm resourceful, not afraid to ask for advice and good with applying results to practise. I have been doing service design and development constantly in my previous positions, I believe those could become handy as well.", 
+    {question: "And why do you think you could shine at it?", 
+    answer: "It's very satisfying to make things work elegantly. I've always loved problem solving, putting my brain to work, learning new skills, creating something new. I've got a good amount of logical thinking and persistance among the social skills and customer oriented thinking. I'm resourceful, not afraid to ask for advice and good with applying results to practise. I have been doing service design and development constantly in my previous positions, I believe those could become handy as well.", 
     id: 8
     },
     {question: "Why do you think we should hire you?", 
-    answer: "Because I am a highly motivated, quick learner, team player, independent worker and got curious mind. Three months of independent studies (while full time working and being a single parent) has tought me this much, I'm sure some time with actually chance to study and learning from pros would be a game changer.", 
+    answer: "Because I am a highly motivated, quick learner, team player, independent worker and got curious mind. Three months of independent studies (while full time working and being a single parent) has tought me this much, I'm sure some time with actually chance to study and learning from pros would be a real game changer.", 
     id: 9
     },
     {question: "The most important question: Do you know what idempotency mean?", 
