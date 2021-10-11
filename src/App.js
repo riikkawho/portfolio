@@ -14,7 +14,7 @@ return (
     gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20, height: "100%" }}>
     <div > 
     <Container 
-      sx={{ height: '120%', width: '30' }} 
+      sx={{ height: '110%', width: '30' }} 
       style={{backgroundColor: "whitesmoke", borderRadius: "10px"}}>
       <Info /> 
       <RepoDetails/> 
@@ -22,13 +22,13 @@ return (
   </div>
   <div>
     <Container 
-      sx={{ height: '120%' }} 
+      sx={{ height: '110%' }} 
       style={{ backgroundColor: "lightgrey", borderRadius: "10px" }}>
       <QuestAns />
     </Container>
   </div>  
   <div>
-    <Container sx={{ height: '120%' }} 
+    <Container sx={{ height: '110%' }} 
       style={{ backgroundColor: "whitesmoke", borderRadius: "10px" }}>
       <Comment />
     </Container>

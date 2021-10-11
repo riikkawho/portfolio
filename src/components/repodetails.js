@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { ListItemButton, ListItemText } from "@mui/material";
+import { ListItemButton, ListItemText, Card } from "@mui/material";
 import infosService from '../services/infosService'
 import moment from "moment";
 
@@ -34,13 +34,18 @@ const RepoDetails = (props) => {
         <h4>Repositories</h4>
         {subInfo.map((repo, index) => 
           showRepo === index
-          ? <ListItemButton key={repo.name} onClick={() => onClickRepo(index)}>
+          ? <Card>
+            <ListItemButton key={repo.name} onClick={() => onClickRepo(index)}>
             <ListItemText primary={repo.name} secondary={`Contains ${repoInfo.length} items, last commit was ${moment(repo.pushed_at, "YYYY-MM-DD").fromNow()}, written in ${repo.language}`}/>
             </ListItemButton>
+            </Card>
     
-          : <ListItemButton key={repo.name} onClick={() => onClickRepo(index)}>
+          : <Card>
+            <ListItemButton key={repo.name} onClick={() => onClickRepo(index)}>
             <ListItemText primary={repo.name} />
-            </ListItemButton>)}</div>
+            </ListItemButton>
+            </Card>)}
+        </div>
     )
   }
 
