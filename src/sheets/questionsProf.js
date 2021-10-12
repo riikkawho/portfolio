@@ -12,7 +12,7 @@ const questSheetProf = [
     id: 8
     },
     {question: "And why do you think we should hire you?", 
-    answer: "Because I am a highly motivated, quick learner, team player, independent worker and got curious mind. Three months of independent studies (while full time working and being a single parent) has tought me this much, it might not be much but a good start I think and I'm sure some time with actually chance to study and learning from pros would be a real game changer.", 
+    answer: "Because I am highly motivated, quick learner, team player, independent worker and got curious mind. Three months of independent studies (while full time working and being a single parent) has tought me this much, it might not be much but a good start I think and I'm sure some time with actually chance to study and learning from pros would be a real game changer.", 
     id: 9
     },
     {question: "The most important question: Do you know what idempotency means?", 

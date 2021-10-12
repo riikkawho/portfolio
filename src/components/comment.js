@@ -27,8 +27,8 @@ import commentService from "../services/commentService";
         .getComments()
         .then(response => {
           setComments(response.data)
-      }, [])
-    })
+      })
+    }, [])
   
     const handleChange = (event) => {
       setNewComment(event.target.value)
